@@ -59,7 +59,7 @@ int main()
     int num;
     Coin quarter;
     quarter.initialize();
-    cout << "Welcome to coin toss!" << endl;
+    cout << "Welcome to Coin Toss!" << endl;
 
     cout << quarter.getSideUp() << endl;
     cout << "How many coin tosses?" << endl;

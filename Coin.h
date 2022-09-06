@@ -38,20 +38,20 @@ string Coin::initialize() {
 }
 
 //toss function that flips the coin x amount of times
-void Coin::toss(Coin tobetossed, int num) {
+void Coin::toss(Coin toBeTossed, int num) {
     //vectors to keep track of results
     vector<string> vTails;
     vector<string> vHeads;
 
     //for loop that tosses coin x amount of times and displays results
     for (int i = 0; i < num; i++) {
-        tobetossed.initialize();
-        cout << "Toss " << i + 1 << ": " << tobetossed.getSideUp() << endl;
-        if (tobetossed.getSideUp() == "Heads") {
-            vHeads.push_back(tobetossed.getSideUp());
+        toBeTossed.initialize();
+        cout << "Toss " << i + 1 << ": " << toBeTossed.getSideUp() << endl;
+        if (toBeTossed.getSideUp() == "Heads") {
+            vHeads.push_back(toBeTossed.getSideUp());
         }
         else {
-            vTails.push_back(tobetossed.getSideUp());
+            vTails.push_back(toBeTossed.getSideUp());
         }
     }
     //display results of heads and tails

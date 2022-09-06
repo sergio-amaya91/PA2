@@ -17,7 +17,7 @@ class Coin {
     
     private:
     
-    string sideUp;
+        string sideUp;
 
     public:
         string initialize();
@@ -25,7 +25,9 @@ class Coin {
         string getSideUp();
 };
 
+//initializing function to get side up
 string Coin::initialize() {
+    
     int num;
     
     num = rand();
@@ -37,6 +39,8 @@ string Coin::initialize() {
     }
     return sideUp;
 }
+
+//toss function that flips the coin x amount of times
 void Coin::toss(Coin tobetossed, int num) {
     for (int i = 0; i < num; i++) {
         tobetossed.initialize();
@@ -47,23 +51,28 @@ void Coin::toss(Coin tobetossed, int num) {
 
 }
 
-
+//returns the side that is up
 string Coin::getSideUp() {
     return sideUp;
 }
 
 //Main entry point
 int main()
-{
+{   //variables and random seed generation
     srand(time(0));
     int num;
     Coin quarter;
-    quarter.initialize();
-    cout << "Welcome to Coin Toss!" << endl;
 
-    cout << quarter.getSideUp() << endl;
+    //coin creation
+    quarter.initialize();
+    
+    //output
+    cout << "Welcome to Coin Toss!" << endl<<endl;
+    
+    cout<<"Initial side up: " << quarter.getSideUp() << endl;
     cout << "How many coin tosses?" << endl;
     cin >> num;
+    //start coin toss using the coin used and number of times to be tossed
     quarter.toss(quarter, num);
 
    
